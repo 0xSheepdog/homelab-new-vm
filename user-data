@@ -1,0 +1,10 @@
+#cloud-config
+users:
+  - name: labuser
+    lock_passwd: false
+    plain_text_passwd: ChangeMe
+    groups: users, admin
+    sudo: ALL=(ALL) ALL
+    ssh_pwauth: false
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAArandom-characters-here labuser@homelab
